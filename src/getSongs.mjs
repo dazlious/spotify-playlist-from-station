@@ -10,17 +10,17 @@ const extractSongs = (data) => {
   const cheerio = load(data);
 
   const artists = cheerio('div > div > div:nth-child(2)');
-  const songs = cheerio('div > div > div:nth-child(3)');
+  const tracks = cheerio('div > div > div:nth-child(3)');
 
   const results = [];
 
   for (let i = 0; i < artists.length; i++) {
     const [{ data: artist }] = artists[i].children;
-    const [{ data: song }] = songs[i].children;
+    const [{ data: track }] = tracks[i].children;
 
     results.push({
       artist,
-      song,
+      track,
     });
   }
 
