@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "@titelmedia/eslint-config-es6",
+    "prettier"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "env": {
+    "node": true
+  },
+  "rules": {
+    "prettier/prettier": "error"
+  }
+}

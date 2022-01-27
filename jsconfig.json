@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {}
+  },
+  "exclude": [
+    "**/node_modules",
+    "**/dist",
+    "**/.out",
+    "coverage",
+    ".vscode",
+    "*.mp4",
+    "*.png",
+    "*.tgz",
+    "logs",
+    "*.log",
+    "*.md",
+    ".env",
+    ".envrc",
+    ".env.test"
+  ]
+}
