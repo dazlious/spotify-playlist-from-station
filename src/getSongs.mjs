@@ -46,12 +46,7 @@ const getSongs = async (page = 1) => {
   return songs;
 };
 
-export default async (amount) => {
-  const songs = [];
-
-  for (let page = 0; page <= amount / PAGE_SIZE; page++) {
-    songs.push(...(await getSongs(page)));
-  }
-
-  return songs;
+export default (amount, limiterFn) => {
+  const pages = amount / PAGE_SIZE;
+  return [...Array(pages)].map((_, page) => limiterFn(() => getSongs(page)));
 };
